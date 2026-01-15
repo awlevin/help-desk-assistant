@@ -1,131 +1,108 @@
 # 🎧 Help Desk Assistant
 
-[![Vellum Workflow](https://img.shields.io/badge/Vellum-Workflow-blueviolet)](https://www.vellum.ai)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Vellum](https://img.shields.io/badge/Built%20with-Vellum-blue)](https://www.vellum.ai)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-green)](https://www.python.org/)
 
-An intelligent help desk assistant workflow built with Vellum that provides automated customer support responses. This AI-powered agent can handle common support queries, provide helpful information, and assist users with their questions in a conversational manner.
+An intelligent help desk assistant workflow built with Vellum that provides automated customer support and ticket management capabilities.
 
-## 🌟 Features
+## 🌟 Overview
 
-- **Conversational AI**: Natural language understanding for customer support queries
-- **Automated Responses**: Intelligent prompt-based response generation
-- **Chat Interface**: Built-in chat message trigger for seamless conversations
-- **Customizable**: Easy to modify and extend for your specific use case
+This workflow implements a conversational help desk assistant that can handle customer inquiries, provide support information, and assist with common help desk tasks. The assistant is designed to streamline customer support operations and provide quick, accurate responses to user questions.
 
-## 📁 Repository Structure
+## 📁 Project Structure
 
 ```
 help-desk-assistant/
 ├── nodes/
-│   └── prompt.py          # Core prompt node logic for generating responses
+│   └── prompt.py          # Core prompt node for the assistant's responses
 ├── display/
-│   ├── workflow.py        # Workflow visualization and structure
+│   ├── workflow.py        # Workflow visualization and display logic
 │   └── nodes/
 │       └── prompt.py      # Display configuration for prompt nodes
 ├── triggers/
 │   └── chat_message.py    # Chat message trigger configuration
-└── README.md              # This file
+└── README.md
 ```
 
-### Key Files Breakdown
+### Key Files
 
-- **`nodes/prompt.py`**: Contains the main prompt node implementation that processes user queries and generates appropriate help desk responses using AI.
+- **`nodes/prompt.py`**: Contains the main prompt logic that powers the help desk assistant's conversational capabilities. This defines how the assistant processes and responds to user queries.
 
-- **`display/workflow.py`**: Defines the workflow structure and how different nodes connect together. This is the blueprint of your help desk assistant.
+- **`display/workflow.py`**: Defines the visual representation and flow of the workflow in the Vellum UI, showing how different nodes connect and interact.
 
-- **`display/nodes/prompt.py`**: Configuration for how prompt nodes are displayed and configured in the Vellum UI.
+- **`display/nodes/prompt.py`**: Configuration for how prompt nodes are displayed in the workflow editor.
 
-- **`triggers/chat_message.py`**: Defines the chat message trigger that initiates the workflow when a user sends a message.
+- **`triggers/chat_message.py`**: Defines the chat message trigger that initiates the workflow when users send messages to the assistant.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Python 3.8 or higher
-- A Vellum API key ([get one here](https://app.vellum.ai))
+- A Vellum API key ([get one here](https://app.vellum.ai/))
 
 ### Running Locally
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/awlevin/help-desk-assistant.git
-   cd help-desk-assistant
-   ```
+1. Clone this repository:
+```bash
+git clone https://github.com/awlevin/help-desk-assistant.git
+cd help-desk-assistant
+```
 
-2. **Install dependencies**
-   ```bash
-   pip install vellum-ai
-   ```
+2. Install dependencies:
+```bash
+pip install vellum-ai
+```
 
-3. **Set your Vellum API key and run**
-   ```bash
-   VELLUM_API_KEY=your_api_key_here python -m nodes.sandbox
-   ```
+3. Run the workflow:
+```bash
+VELLUM_API_KEY=your_api_key_here python -m nodes.sandbox
+```
 
-   Replace `your_api_key_here` with your actual Vellum API key.
+Replace `your_api_key_here` with your actual Vellum API key.
 
-## 🎮 Try It Out
+## 🔗 Try It Online
 
-Want to see the workflow in action before running it locally? Try the public preview:
+Experience the help desk assistant in action with the public preview:
 
-**[Launch Public Preview →](https://app.vellum.ai/public/workflow-sandboxes/help-desk-assistant)**
+**[Launch Public Preview](https://app.vellum.ai/public/workflow-sandboxes/help-desk-assistant)**
 
-## 🔧 Customization
+## 🛠️ Customize in Vellum
 
-### Modifying the Prompt
+Want to modify this workflow for your specific needs?
 
-To customize the help desk assistant's behavior, edit the prompt configuration in `nodes/prompt.py`. You can:
+1. **Fork the workflow**: Visit the [Vellum app](https://app.vellum.ai) and import this workflow
+2. **Edit nodes**: Customize prompts, add new nodes, or modify the conversation flow
+3. **Test changes**: Use the built-in sandbox to test your modifications
+4. **Deploy**: Deploy your customized version with one click
 
-- Adjust the system prompt to change the assistant's personality
-- Modify response templates
-- Add custom logic for specific query types
+### Customization Ideas
 
-### Extending the Workflow
-
-You can extend this workflow by:
-
-1. Adding new nodes for specialized support categories
-2. Integrating with external APIs (ticketing systems, knowledge bases)
-3. Adding conditional logic for routing different types of queries
-4. Implementing escalation paths for complex issues
-
-## 🎨 Fork and Build in Vellum UI
-
-Want to customize this workflow visually? You can fork it directly in Vellum:
-
-1. Visit [Vellum](https://app.vellum.ai)
-2. Navigate to Workflows
-3. Import this workflow using the deployment name: `help-desk-assistant`
-4. Use the visual editor to modify nodes, add new functionality, and test changes
-5. Deploy your customized version
+- Adjust the assistant's tone and personality in the prompt nodes
+- Add integration nodes to connect with your ticketing system
+- Implement custom logic for routing complex queries
+- Add knowledge base integration for domain-specific support
+- Configure escalation paths for issues requiring human intervention
 
 ## 📚 Learn More
 
-- [Vellum Documentation](https://docs.vellum.ai)
+- [Vellum Documentation](https://docs.vellum.ai/)
 - [Workflow Development Guide](https://docs.vellum.ai/workflows)
 - [API Reference](https://docs.vellum.ai/api-reference)
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
+This workflow was generated from Vellum. To contribute improvements:
 
-- Report bugs
-- Suggest new features
-- Submit pull requests
+1. Make changes in the Vellum UI
+2. Test thoroughly using the sandbox
+3. Export and update this repository
+4. Share your enhancements with the community
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 💬 Support
-
-Need help? 
-
-- Check out the [Vellum Community](https://community.vellum.ai)
-- Review the [documentation](https://docs.vellum.ai)
-- Open an issue in this repository
+This workflow is provided as-is for use with the Vellum platform.
 
 ---
 
-Built with ❤️ using [Vellum](https://www.vellum.ai)
+**Built with ❤️ using [Vellum](https://www.vellum.ai)**
